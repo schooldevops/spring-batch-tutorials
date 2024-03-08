@@ -1,0 +1,57 @@
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      username: root
+      password: root1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&clusterInstanceHostPattern=?&zeroDateTimeBehavior=CONVERT_TO_NULL&allowMultiQueries=true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+#    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: true
+  batch:
+    job:
+      name: QUERYDSL_PAGING_CHUNK_JOB
+#    jdbc:
+#      initialize-schema: always
+
+logging:
+  level:
+    org:
+      hibernate:
+        sql: debug
+        type: trace
+        orm:
+          jdbc:
+            bind: trace
+#        stat: debug
+#        sql_slow: info
+#        cache: debug
+
+
+# HSQL DataBase?
+#spring:
+#  datasource:
+#    hikari:
+#      maximum-pool-size: 10
+#    url: jdbc:hsqldb:mem:testdb
+#    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+#    username: sa
+#    password: password
+
+
+# Derby DataBase?
+#spring:
+#  datasource:
+#    hikari:
+#      maximum-pool-size: 10
+#    url: jdbc:derby:memory:testdb;create=true
+#    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+#    username: sa
+#    password: password
