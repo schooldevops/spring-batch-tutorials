@@ -15,9 +15,6 @@ spring:
     hibernate:
       ddl-auto: create-drop
     show-sql: true
-  batch:
-    job:
-      name: myJob
 
 # HSQL DataBase?
 #spring:
