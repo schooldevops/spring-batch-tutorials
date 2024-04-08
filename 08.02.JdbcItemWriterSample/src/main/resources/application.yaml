@@ -1,0 +1,30 @@
+# H2 DataBase?
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&clusterInstanceHostPattern=?&zeroDateTimeBehavior=CONVERT_TO_NULL&allowMultiQueries=true
+    username: root
+    password: root1234
+  batch:
+    job:
+      name: JDBC_BATCH_WRITER_CHUNK_JOB
+
+# HSQL DataBase?
+#spring:
+#  datasource:
+#    hikari:
+#      maximum-pool-size: 10
+#    url: jdbc:hsqldb:mem:testdb
+#    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+#    username: sa
+#    password: password
+
+
+# Derby DataBase?
+#spring:
+#  datasource:
+#    hikari:
+#      maximum-pool-size: 10
+#    url: jdbc:derby:memory:testdb;create=true
+#    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+#    username: sa
+#    password: password
