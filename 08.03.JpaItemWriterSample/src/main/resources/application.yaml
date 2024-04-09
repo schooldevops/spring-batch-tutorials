@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      username: root
+      password: root1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&clusterInstanceHostPattern=?&zeroDateTimeBehavior=CONVERT_TO_NULL&allowMultiQueries=true
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    #    defer-datasource-initialization: true
+    properties:
+      hibernate:
+        format_sql: true
+  batch:
+    job:
+      name: JPA_ITEM_WRITER_JOB
