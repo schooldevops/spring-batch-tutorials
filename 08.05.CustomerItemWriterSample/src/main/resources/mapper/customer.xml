@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.schooldevops.springbatch.batchsample.jobs">
+
+    <resultMap id="customerResult" type="com.schooldevops.springbatch.batchsample.jobs.models.Customer">
+        <result property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="age" column="age"/>
+        <result property="gender" column="gender"/>
+    </resultMap>
+
+    <insert id="insertCustomers" parameterType="com.schooldevops.springbatch.batchsample.jobs.models.Customer">
+        INSERT INTO customer2(name, age, gender) VALUES (#{name}, #{age}, #{gender});
+    </insert>
+</mapper>
