@@ -1,0 +1,43 @@
+# H2 DataBase?
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  batch:
+    job:
+#      name: NEXT_STEP_TASK
+#      name: ON_STEP_TASK
+      name: STOP_STEP_TASK
+
+# HSQL DataBase?
+#spring:
+#  datasource:
+#    hikari:
+#      maximum-pool-size: 10
+#    url: jdbc:hsqldb:mem:testdb
+#    driver-class-name: org.hsqldb.jdbc.JDBCDriver
+#    username: sa
+#    password: password
+
+
+# Derby DataBase?
+#spring:
+#  datasource:
+#    hikari:
+#      maximum-pool-size: 10
+#    url: jdbc:derby:memory:testdb;create=true
+#    driver-class-name: org.apache.derby.jdbc.EmbeddedDriver
+#    username: sa
+#    password: password
