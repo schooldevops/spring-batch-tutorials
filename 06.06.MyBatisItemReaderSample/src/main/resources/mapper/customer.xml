@@ -17,4 +17,9 @@
 		FROM customer
 		LIMIT #{_skiprows}, #{_pagesize}
 	</select>
+
+	<select id="selectCursorCustomers" resultMap="customerResult" fetchSize="2">
+		SELECT id, name, age, gender
+		FROM customer
+	</select>
 </mapper>

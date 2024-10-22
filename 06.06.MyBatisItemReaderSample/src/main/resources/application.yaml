@@ -6,7 +6,7 @@ spring:
       driver-class-name: com.mysql.cj.jdbc.Driver
       username: root
       password: root1234
-      jdbc-url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&clusterInstanceHostPattern=?&zeroDateTimeBehavior=CONVERT_TO_NULL&allowMultiQueries=true
+      jdbc-url: jdbc:mysql://localhost:3306/testdb?useUnicode=true&characterEncoding=utf8&clusterInstanceHostPattern=?&zeroDateTimeBehavior=CONVERT_TO_NULL&allowMultiQueries=true&useCursorFetch=true
 
   jpa:
     hibernate:
@@ -18,7 +18,7 @@ spring:
         format_sql: true
   batch:
     job:
-      name: MYBATIS_CHUNK_JOB
+      name: MYBATIS_CURSOR_JOB
   sql:
     init:
       mode: always
