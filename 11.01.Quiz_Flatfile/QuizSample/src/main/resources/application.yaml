@@ -1,0 +1,20 @@
+# H2 DataBase?
+spring:
+  datasource:
+    hikari:
+      maximum-pool-size: 10
+      driver-class-name: org.h2.Driver
+      jdbc-url: jdbc:h2:mem:testdb
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+  batch:
+    job:
+      name: FLAT_FILE_WRITER_CHUNK_JOB
